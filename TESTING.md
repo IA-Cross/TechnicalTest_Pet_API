@@ -87,20 +87,6 @@ curl -s -w "\nHTTP %{http_code}\n" -X POST http://localhost:8080/api/pet \
   -H "Content-Type: application/json"
 ```
 
-### 502 — upstream Petstore failure
-
-Stop the app, restart it pointing at a dead URL, then call the API:
-
-```bash
-./gradlew bootRun --args='--petstore.base-url=https://localhost:9999/v2'
-```
-
-```bash
-curl -s -w "\nHTTP %{http_code}\n" http://localhost:8080/api/pet/10
-```
-
-> Restart the app normally afterwards: `./gradlew bootRun`
-
 ---
 
 ## 3. Field format checks (requires `jq`)
