@@ -146,6 +146,5 @@ Pet found: id=10, name=doggie, status=string                      <- System.out
 | GET non-numeric id | 400 |
 | POST missing/blank/null fields | 400 |
 | POST malformed or missing body | 400 |
-| Upstream Petstore down | 502 |
 
 All error responses share the standardized JSON body: `timestamp`, `status`, `error`, `message`, `path`.
